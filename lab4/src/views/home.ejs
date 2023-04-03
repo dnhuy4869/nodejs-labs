@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__title"><a href="#">Poly Book Store</a></li>
+            <li class="main-header__item"><a href="/">Tất cả</a></li>
+            <% for(let cate of catalogs){ %>
+                <li class="main-header__item"><a href="/<%=cate.idCategory 
+                    %>"><%= 
+               cate.nameCategory %></a></li>
+            <%}%>
+        </ul>
+    </nav>
+    <main align="center">
+        <div class="grid">
+            <% for (let product of products) { %>
+                <article class="card product-item">
+                    <header class="card__header">
+                        <h1 class><%= product.nameProduct %></h1>
+                    </header>
+                    <div class="card_image">
+                        <img src="images/<%= product.images %>" alt="A book" />
+                    </div>
+                    <div class="card_content">
+                        <h2 class="product__price"> $<%= product.priceProduct %></h2>
+                        <p class="product__description"><%= product.sortDescription %></p>
+                    </div>
+                    <div class="card__actions">
+                        <button class="btn">Add to cart</button>
+                    </div>
+                </article>
+            <% } %>
+        </div>
+    </main>
+</body>
+
+</html>

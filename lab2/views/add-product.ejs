@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__item"><a class="active" href="/">Trang chủ</a></li>
+            <li class="main-header__item"><a href="/shop">Sản phẩm</a></li>
+            <li class="main-header__item"><a href="/add-new">Thêm sản phẩm</a></li>
+        </ul>
+    </nav>
+    <div class="form-wrap">
+        <form class="product-form" action="/add-new" method="POST" enctype="multipart/form-data">
+            <label>Tên sản phẩm</label>
+            <br/>
+            <input type="text" name="name">
+            <br/>
+            <label>Giá</label>
+            <br/>
+            <input type="text" name="price">
+            <br/>
+            <label>Mô tả</label>
+            <br/>
+            <input type="text" name="desc">
+            <br/>
+            <label>Hình ảnh</label>
+            <br/>
+            <input type="file" name="img">
+            <br/>
+            <button type="submit">Thêm</button>
+        </form>
+    </div>
+</body>
+
+</html>

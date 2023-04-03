@@ -1,0 +1,79 @@
+.main-header__nav {
+    background-color: green;
+}
+
+.main-header__item-list {
+    list-style: none;
+}
+
+.main-header__item,
+.main-header__title {
+    display: inline-block;
+    margin: 0 8px;
+    padding: 16px;
+}
+
+.main-header__item a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.main-header__title a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+    gap: 8px 8px;
+}
+
+.card {
+    background-color: burlywood;
+}
+
+.card_image img {
+    width: 100%;
+}
+
+.card__header {
+    text-align: center;
+}
+
+.card_content {
+    text-align: center;
+}
+
+.card__actions {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    padding: 12px;
+    background-color: green;
+    color: yellow
+}
+
+.form-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.product-form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

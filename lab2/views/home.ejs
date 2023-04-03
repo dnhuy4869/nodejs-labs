@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__item"><a class="active" href="/">Trang chủ</a></li>
+            <li class="main-header__item"><a href="/shop">Sản phẩm</a></li>
+            <li class="main-header__item"><a href="/add-new">Thêm sản phẩm</a></li>
+        </ul>
+    </nav>
+    <main align="center">
+        <h1>Chào mừng bạn đến với website</h1>
+        <% if (kindOfDay == 'Chủ nhật' || kindOfDay == 'Thứ bảy') { %>
+            <h2>Hôm nay là cuối tuần</h2>
+        <% } else { %>
+            <h2>Hôm nay là <%= kindOfDay %></h2>
+        <% }%>
+    </main>
+</body>
+
+</html>

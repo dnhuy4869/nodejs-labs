@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__title"><a href="#">Poly Book Store</a></li>
+            <li class="main-header__item"><a href="/admin">Sản phẩm</a></li>
+            <li class="main-header__item"><a href="/admin/add-product">Thêm sản phẩm</a></li>
+        </ul>
+    </nav>
+    <main align="center">
+        <div class="grid">
+            <% for (let product of products) { %>
+                <article class="card product-item">
+                    <header class="card__header">
+                        <h1 class><%= product.nameProduct %></h1>
+                    </header>
+                    <div class="card_image">
+                        <a href="/admin/product-detail/<%= product.idProduct %>">
+                            <img src="images/<%= product.images %>" alt="A book" />
+                        </a>
+                    </div>
+                    <div class="card_content">
+                        <h2 class="product__price"> $<%= product.priceProduct %></h2>
+                        <p class="product__description"><%= product.sortDescription %></p>
+                    </div>
+                    <div class="card__actions" style="display: flex; align-items: center; gap: 10px;">
+                        <a href="/admin/edit-product/<%= product.idProduct %>"><button class="btn">Edit</button></a>
+                        <a href="/api/delete-product/<%= product.idProduct %>"><button class="btn">Delete</button></a>
+                    </div>
+                </article>
+            <% } %>
+        </div>
+    </main>
+</body>
+
+</html>
